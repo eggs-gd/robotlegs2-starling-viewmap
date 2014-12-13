@@ -7,7 +7,7 @@ package
 	import robotlegs.bender.bundles.mvcs.MVCSBundle;
 	import robotlegs.bender.framework.api.IContext;
 	import robotlegs.bender.framework.impl.Context;
-	import robotlegs.extensions.starlingViewMap.StarlingViewMapExtension;
+	import robotlegs.bender.extensions.starlingViewMap.StarlingViewMapExtension;
 	import starling.core.Starling;
 	import views.StarlingContextView;
 

@@ -13,7 +13,8 @@ or MediatorMap.unmediate() respectively.
 
 
 ## Notes.
-There is no Mediator.addViewListener() or Mediator.addContextListener() yet as Starling uses it's own EventDispatcher. 
+Mediator.addViewListener() or Mediator.removeViewListener() uses Starling's own EventDispatcher and it's own event types
+separately to Mediator.addContextListener() Mediator.removeContextListener() which uses global eventDispatcher.
 
 
 

@@ -1,5 +1,5 @@
 package mediators {
-	import robotlegs.extensions.starlingViewMap.impl.StarlingMediator;
+	import robotlegs.bender.extensions.starlingViewMap.impl.StarlingMediator;
 
 	/**
 	 * @author jamieowen
