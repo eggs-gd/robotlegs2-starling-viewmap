@@ -1,8 +1,12 @@
-package robotlegs.extensions.starlingViewMap.impl {
+package robotlegs.bender.extensions.starlingViewMap.impl {
 	import flash.events.Event;
 	import flash.events.IEventDispatcher;
 	import robotlegs.bender.extensions.localEventMap.api.IEventMap;
 	import robotlegs.bender.extensions.mediatorMap.api.IMediator;
+	import robotlegs.bender.extensions.starlingEventMap.api.IStarlingEventMap;
+
+	import starling.events.EventDispatcher;
+
 
 	/**
 	 * @author jamieowen
@@ -11,6 +15,9 @@ package robotlegs.extensions.starlingViewMap.impl {
 	{
 		[Inject]
 		public var eventMap:IEventMap;
+
+		[Inject]
+		public var starlingEventMap:IStarlingEventMap;
 
 		[Inject]
 		public var eventDispatcher:IEventDispatcher;
@@ -37,10 +44,21 @@ package robotlegs.extensions.starlingViewMap.impl {
 			eventMap.unmapListeners();
 		}
 
+		protected function addViewListener(eventString:String, listener:Function, eventClass:Class = null):void
+		{
+			starlingEventMap.mapListener(EventDispatcher(_viewComponent), eventString, listener, eventClass);
+		}
+
 		protected function addContextListener(eventString:String, listener:Function, eventClass:Class = null):void
 		{
 			eventMap.mapListener(eventDispatcher, eventString, listener, eventClass);
 		}
+
+		protected function removeViewListener(eventString:String, listener:Function, eventClass:Class = null):void
+		{
+			starlingEventMap.unmapListener(EventDispatcher(_viewComponent), eventString, listener, eventClass);
+		}
+
 
 		protected function removeContextListener(eventString:String, listener:Function, eventClass:Class = null):void
 		{

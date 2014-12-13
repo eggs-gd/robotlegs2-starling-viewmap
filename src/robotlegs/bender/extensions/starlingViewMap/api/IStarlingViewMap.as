@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it. 
 //------------------------------------------------------------------------------
 
-package robotlegs.extensions.starlingViewMap.api
+package robotlegs.bender.extensions.starlingViewMap.api
 {
 	import starling.display.DisplayObject;
 	

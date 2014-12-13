@@ -5,14 +5,14 @@
 //  in accordance with the terms of the license agreement accompanying it. 
 //------------------------------------------------------------------------------
 
-package robotlegs.extensions.starlingViewMap
+package robotlegs.bender.extensions.starlingViewMap
 {
 	import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
 	import robotlegs.bender.framework.api.IContext;
 	import robotlegs.bender.framework.api.IExtension;
 	import robotlegs.bender.framework.impl.UID;
-	import robotlegs.extensions.starlingViewMap.api.IStarlingViewMap;
-	import robotlegs.extensions.starlingViewMap.impl.StarlingViewMap;
+	import robotlegs.bender.extensions.starlingViewMap.api.IStarlingViewMap;
+	import robotlegs.bender.extensions.starlingViewMap.impl.StarlingViewMap;
 	import robotlegs.bender.extensions.matching.instanceOfType;
 	
 	import starling.core.Starling;
