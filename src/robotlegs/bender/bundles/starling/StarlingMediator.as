@@ -1,4 +1,4 @@
-package robotlegs.bender.extensions.starlingViewMap.impl {
+package robotlegs.bender.bundles.starling {
 	import flash.events.Event;
 	import flash.events.IEventDispatcher;
 	import robotlegs.bender.extensions.localEventMap.api.IEventMap;

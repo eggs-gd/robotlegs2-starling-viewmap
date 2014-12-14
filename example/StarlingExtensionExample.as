@@ -1,5 +1,6 @@
 package 
 {
+	import robotlegs.bender.bundles.starling.StarlingBundle;
 	import robotlegs.bender.extensions.contextView.ContextView;
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
@@ -7,7 +8,6 @@ package
 	import robotlegs.bender.bundles.mvcs.MVCSBundle;
 	import robotlegs.bender.framework.api.IContext;
 	import robotlegs.bender.framework.impl.Context;
-	import robotlegs.bender.extensions.starlingViewMap.StarlingViewMapExtension;
 	import starling.core.Starling;
 	import views.StarlingContextView;
 
@@ -33,7 +33,7 @@ package
 			const starling:Starling = new Starling(StarlingContextView, stage);
 			
 			_context = new Context()
-				.install( MVCSBundle, StarlingViewMapExtension )
+				.install( MVCSBundle, StarlingBundle )
 				.configure(StarlingConfig, new ContextView( this ), starling);
 				
 		}
