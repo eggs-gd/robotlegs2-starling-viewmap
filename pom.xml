@@ -6,7 +6,7 @@
 	<groupId>robotlegs.extensions</groupId>
 	<artifactId>robotlegs2-starling-viewmap</artifactId>
 	<name>robotlegs2-starling-viewmap</name>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>swc</packaging>
 	
 	<properties>
@@ -80,6 +80,9 @@
 					<as3>true</as3>
 					<storepass/>
 					<targetPlayer>${flashplayer.version}</targetPlayer>
+					<compilerWarnings>
+						<warn-no-constructor>false</warn-no-constructor>
+					</compilerWarnings>
 				</configuration>
 				
 				<dependencies>
