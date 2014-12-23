@@ -5,31 +5,28 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //------------------------------------------------------------------------------
 
-package robotlegs.bender.extensions.starlingEventMap
-{
-	import robotlegs.bender.framework.api.IContext;
-	import robotlegs.bender.framework.api.IExtension;
-	import robotlegs.bender.extensions.starlingEventMap.api.IStarlingEventMap;
-	import robotlegs.bender.extensions.starlingEventMap.impl.StarlingEventMap;
+package robotlegs.bender.extensions.starlingEventMap {
+    import robotlegs.bender.framework.api.IContext;
+    import robotlegs.bender.framework.api.IExtension;
+    import robotlegs.bender.extensions.starlingEventMap.api.IStarlingEventMap;
+    import robotlegs.bender.extensions.starlingEventMap.impl.StarlingEventMap;
 
 
-	/**
-	 * An Event Map keeps track of listeners and provides the ability
-	 * to unregister all listeners with a single method call.
-	 */
-	public class StarlingEventMapExtension implements IExtension
-	{
+    /**
+     * An Event Map keeps track of listeners and provides the ability
+     * to unregister all listeners with a single method call.
+     */
+    public class StarlingEventMapExtension implements IExtension {
 
-		/*============================================================================*/
-		/* Public Functions                                                           */
-		/*============================================================================*/
+        /*============================================================================*/
+        /* Public Functions                                                           */
+        /*============================================================================*/
 
-		/**
-		 * @inheritDoc
-		 */
-		public function extend(context:IContext):void
-		{
-			context.injector.map(IStarlingEventMap).toType(StarlingEventMap);
-		}
-	}
+        /**
+         * @inheritDoc
+         */
+        public function extend(context:IContext):void {
+            context.injector.map(IStarlingEventMap).toType(StarlingEventMap);
+        }
+    }
 }
