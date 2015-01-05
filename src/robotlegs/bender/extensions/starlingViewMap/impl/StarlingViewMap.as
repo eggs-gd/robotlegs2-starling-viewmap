@@ -49,8 +49,8 @@ package robotlegs.bender.extensions.starlingViewMap.impl {
         [PostConstruct]
         public function init():void {
             // listen for display object events
-            starling.stage.addEventListener(Event.ADDED, onStarlingAdded);
-            starling.stage.addEventListener(Event.REMOVED, onStarlingRemoved);
+            starling.stage.addEventListener(Event.ADDED_TO_STAGE, onStarlingAdded);
+            starling.stage.addEventListener(Event.REMOVED_FROM_STAGE, onStarlingRemoved);
 
             // adds stage as view to allow a Starling Stage Mediator.
             starling.addEventListener(Event.ROOT_CREATED, onRootCreated);
@@ -58,8 +58,8 @@ package robotlegs.bender.extensions.starlingViewMap.impl {
 
         [PreDestroy]
         public function destroy():void {
-            starling.stage.removeEventListener(Event.ADDED, onStarlingAdded);
-            starling.stage.removeEventListener(Event.REMOVED, onStarlingRemoved);
+            starling.stage.removeEventListener(Event.ADDED_TO_STAGE, onStarlingAdded);
+            starling.stage.removeEventListener(Event.REMOVED_FROM_STAGE, onStarlingRemoved);
             starling.removeEventListener(Event.ROOT_CREATED, onRootCreated);
         }
 
