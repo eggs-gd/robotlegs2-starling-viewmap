@@ -42,6 +42,7 @@ package robotlegs.bender.bundles.starling {
 		public function destroy() : void
 		{
 			eventMap.unmapListeners();
+			starlingEventMap.unmapListeners();
 		}
 
 		protected function addViewListener(eventString:String, listener:Function, eventClass:Class = null):void
